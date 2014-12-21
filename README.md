@@ -1,24 +1,35 @@
 meanie
 ======
 
-Simple tutorial app to learn the MEAN framework
+Simple tutorial app to demonstrate the MEAN framework
 
 Setup
 -----
+> NOTE: With the possible exception of global package installs, all commands are run from the project root directory
 
 1. Install global system-level dependencies
 
-* MongoDB
-* node.js
-* npm
-* bower
+  * [MongoDB](http://docs.mongodb.org/manual/installation/)
+  * [node.js](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager)
+  * [npm](https://github.com/npm/npm#super-easy-install)
+  * bower: `npm install -g bower`
 
-2. Install npm packages from project root:
+2. Install npm packages:
 
-`npm install`
+  ```
+  npm install
+  ```
 
-3. Start node server from project root:
+3. Install bower packages:
 
-`node server.js`
+  ```
+  bower install
+  ```
 
-4. Profit!
+4. Start node server:
+
+  ```
+  node server.js
+  ```
+  
+5. Navigate to localhost:8080 and enjoy!
