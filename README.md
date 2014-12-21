@@ -17,19 +17,19 @@ Setup
 2. Install npm packages:
 
   ```
-  npm install
+  $ npm install
   ```
 
 3. Install bower packages:
 
   ```
-  bower install
+  $ bower install
   ```
 
 4. Start node server:
 
   ```
-  node server.js
+  $ node server.js
   ```
   
 5. Navigate to localhost:8080 and enjoy!
