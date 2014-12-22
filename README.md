@@ -1,7 +1,7 @@
 meanie
 ======
 
-Simple tutorial app to demonstrate the MEAN framework
+Simple tutorial app to demonstrate the MEAN framework. Basically just following the [thinkster.io tutorial](https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/) step-by-step, with [architectural guidance](http://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application) from scotch.io
 
 Setup
 -----
