@@ -1,2 +1,2 @@
 /*global angular */
-angular.module('flapperNews', ['ngRoute', 'appRoutes', 'MainCtrl']);
+var flapperNews = angular.module('flapperNews', ['ngRoute', 'appRoutes']);

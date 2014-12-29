@@ -7,7 +7,7 @@ angular.module('appRoutes', []).config([
 
           .when('/', {
               templateUrl: 'views/home.html',
-              controller: 'MainController',
+              controller: 'MainCtrl',
           });
 
       $locationProvider.html5Mode(true);
