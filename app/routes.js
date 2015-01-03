@@ -1,12 +1,12 @@
-module.exports = function(app) {
-  // server routes ====================
+var router = require('express').Router();
+// server routes ====================
 
-  // NONE
+// NONE
 
-  // frontend routes ==================
+// frontend routes ==================
 
-  //route to handle all angular requests
-  app.get('*', function(req, res) {
-    res.sendFile('./public/views/index.html'); 
-  });
-};
+//route to handle all angular requests
+router.route('/')
+  .get(function(req, res){ res.sendFile('index.html'); }); // GET only
+
+module.exports = router;

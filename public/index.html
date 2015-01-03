@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="flapperNews">
   <head>
     <meta charset="UTF-8">
     <base href="/">
@@ -15,11 +15,10 @@
 
     <!-- ANGULAR CUSTOM -->
     <script src="js/app.js"></script>
-    <script src="js/appRoutes.js"></script>
-    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/posts.js"></script>
     <script src="js/services/posts.js"></script>
   </head>
-  <body ng-app="flapperNews" ng-controller="MainCtrl">
+  <body>
     <div ng-view></div>
   </body>
 </html>
