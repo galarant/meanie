@@ -3,7 +3,8 @@
 var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
-var methodOverride = require('method-override');
+//var methodOverride = require('method-override');
+var routes         = require('./app/routes');
 
 // configuration =================
 
@@ -30,13 +31,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 // routes ========================
-require('./app/routes')(app); // configure our routes
+app.use('*', routes);
 
 // start app =====================
-app.listen(port);
-
-// shoutout to the user
-console.log('Magic happens on port ' + port);
-
-// expose app
-exports = module.exports = app;
+app.listen(port, function(){
+  // shoutout to the user
+  console.log('Magic happens on port ' + port);
+});

@@ -1,5 +1,5 @@
 /*global flapperNews */
-flapperNews.controller('MainCtrl', [
+flapperNews.controller('MainController', [
   '$scope',
   'posts',
   function ($scope, posts) {
