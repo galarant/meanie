@@ -6,7 +6,7 @@ var router = require('express').Router();
 // frontend routes ==================
 
 //route to handle all angular requests
-router.route('/')
+router.route('*')
   .get(function(req, res){ res.sendFile('index.html'); }); // GET only
 
 module.exports = router;
