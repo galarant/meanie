@@ -1,19 +1,18 @@
 /*global angular */
-var flapperNews = angular.module('flapperNews', ['ngRoute'])
-  .config([
-    '$routeProvider',
-    '$locationProvider',
-    function($routeProvider, $locationProvider) {
-      $routeProvider
+var flapperNews = angular.module('flapperNews', ['ui.router']);
 
-          .when('/', {
-              templateUrl: 'views/home.html',
-              controller: 'MainController',
-              controllerAs: 'main',
-          })
+flapperNews.config([
+  '$stateProvider',
+  '$urlRouterProvider',
+  function($stateProvider, $urlRouterProvider) {
+    $stateProvider
 
-          .otherwise({ templateUrl: 'index.html', controller: 'MainController' });
+        .state('home', {
+            url: '/home',
+            templateUrl: 'views/home.html',
+            controller: 'MainController',
+        });
 
-      $locationProvider.html5Mode(true);
-    }
-  ]);
+    $urlRouterProvider.otherwise('home');
+
+  }]);

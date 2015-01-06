@@ -1,11 +1,12 @@
 {
-    "name": "meanie",
-    "version": "0.0.1",
-    "dependencies": {
-        "bootstrap": "latest",
-        "font-awesome": "latest",
-        "animate.css": "latest",
-        "angular": "latest",
-        "angular-route": "latest"
-    }
+  "name": "meanie",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-ui-router": "~0.2.13"
+  }
 }
