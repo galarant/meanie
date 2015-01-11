@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "description": "MEAN stack tutorial",
   "main": "server.js",
-  "scripts": {
-    "test": "test",
-    "start": "node server.js"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/galarant/meanie.git"
@@ -18,9 +14,29 @@
   },
   "homepage": "https://github.com/galarant/meanie",
   "dependencies": {
+    "browserify": "^6.3.2",
+    "hashmark": "^2.0.0",
     "express": "~4.10.6",
     "mongoose": "~3.8.21",
     "body-parser": "~1.10.0",
-    "method-override": "~2.3.0"
+    "method-override": "~2.3.0",
+    "rimraf": "^2.2.8",
+    "minifyify": "^4.4.0",
+    "stylus": "^0.49.3",
+    "jade": "^1.7.0",
+    "nodemon": "^1.2.1"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "prebuild": "npm run clean -s",
+    "start": "node server.js",
+    "debug": "DEBUG=* node server.js",
+
+    "build": "npm run build:scripts -s && npm run build:styles -s && npm run build:markup -s",
+    "build:scripts": "browserify -d public/js/app.js -p [minifyify --compressPath . --map app.js.map --output dist/app.js.map] | hashmark -n dist/app.js -s -l 8 -m assets.json 'dist/{name}{hash}{ext}'",
+    "build:styles": "stylus public/styles/main.styl -m -o dist/ && hashmark -s -l 8 -m assets.json dist/main.css 'dist/{name}{hash}{ext}'",
+    "build:markup": "jade public/markup/index.jade --obj assets.json -o dist",
+
+    "watch:build": "nodemon -q -w assets/ --ext '.' --exec 'npm run build'"
   }
 }
