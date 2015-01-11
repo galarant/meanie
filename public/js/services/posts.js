@@ -1,5 +1,5 @@
-/*global flapperNews */
-flapperNews.factory('posts', [function(){
+/*global angular */
+angular.module('flapperNews').factory('posts', [function(){
   var o = {
     posts: [
       {title: 'post 1', upvotes: 5},
