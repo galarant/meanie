@@ -29,3 +29,9 @@ node_modules
 
 # Front-end libs
 /public/libs
+
+#Build folder
+/dist
+
+#Browserify Assets
+assets.json
