@@ -1,7 +1,5 @@
 /*global angular */
-var flapperNews = angular.module('flapperNews', ['ui.router']);
-
-flapperNews.config([
+angular.module('flapperNews', ['ui.router']).config([
   '$stateProvider',
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
@@ -10,7 +8,7 @@ flapperNews.config([
         .state('home', {
             url: '/home',
             templateUrl: 'views/home.html',
-            controller: 'MainController',
+            controller: 'MainController as main',
         });
 
     $urlRouterProvider.otherwise('home');

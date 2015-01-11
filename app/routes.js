@@ -7,6 +7,6 @@ var router = require('express').Router();
 
 //route to handle all angular requests
 router.route('*')
-  .get(function(req, res){ res.sendFile('index.html'); }); // GET only
+  .get(function(req, res){ res.sendFile('public/index.html', { root: __dirname + '/..' }); }); // GET only
 
 module.exports = router;
